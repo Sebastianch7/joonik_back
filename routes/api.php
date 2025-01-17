@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LocationController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('api.key')->get('/locations', [LocationController::class, 'index']);
-Route::get('/locations', [LocationController::class, 'index']);
+//Route::middleware('api.key')->get('/locations', [LocationController::class, 'index']);
+Route::middleware('api.key')->get('/locations', [LocationController::class, 'index']);
+
